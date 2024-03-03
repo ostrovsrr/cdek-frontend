@@ -15,7 +15,7 @@ function App() {
   async function handleSubmit() {
     try {
       const response = await axios.post(
-        'https://cdek-backend-d0211be3db6b.herokuapp.com/',
+        'https://cdek-backend-d0211be3db6b.herokuapp.com/cdek/create',
         data
       );
       setMessage(response.data);
