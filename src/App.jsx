@@ -10,7 +10,20 @@ import { useState } from 'react';
 // str.replaceAll("-")
 
 function App() {
-  const [data, setData] = useState({ name: '', phone: '', code: '' });
+  const [data, setData] = useState({
+    type: 'cap',
+    name: '',
+    phone: '',
+    code: '',
+  });
+
+  // height
+  // width
+  // length
+  // weight
+  // cost
+
+  console.log(data);
   const [message, setMessage] = useState(null);
   async function handleSubmit() {
     try {
@@ -31,6 +44,14 @@ function App() {
   }
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <h3>Товар:</h3>
+      <select name="type" onChange={handleChange}>
+        <option value="cap" selected="selected">
+          Кепка
+        </option>
+        <option value="necklace">Подвеска</option>
+        <option value="hoodie">Худи</option>
+      </select>
       <h3>ФИО</h3>
       <input onChange={handleChange} type="text" name="name"></input>
       <h3>Номер телефона +7</h3>
