@@ -34,6 +34,7 @@ function App() {
       setMessage(response.data);
     } catch (err) {
       console.log(err.response.data.message);
+      console.log(err.response.data.orderDetails);
     }
   }
   function handleChange(e) {
